@@ -11,6 +11,10 @@ A tutorial from [React Front to Back](https://www.udemy.com/course/modern-react-
   > I just copied and pasted all types from the tutorial's [github](https://github.com/bradtraversy/contact-keeper/blob/master/client/src/context/types.js) so I wouldn't have to worry about it for the rest of the time.
 - cannot destructure 'name' from 'contacts'
   > forgot to add 'current: state.current; to ContactContext.Provider
+- Expected an assignment or function call and instead saw an expression
+  > I usually do my maps as arr.map(e => { //do smth }), but I kept getting this error and solved it by taking out the {} brackets in my map call.
+- onSubmit not working (for me, specifically onSubmit for Register.js)
+  > I put onSubmit={onSubmit} in the <input type="submit" /> for Register.js. However, it is supposed to be in the form start tag --> <form onSubmit={onSubmit}></form>
 - events.js:200 throw er; //unhandled 'error' event
   > when getting general bugs, I thought this was the source. It was not. As far as I can tell... it didn't effect development for me?
   > If you want to look into it though, I did try this [link](https://levelup.gitconnected.com/how-to-kill-server-when-seeing-eaddrinuse-address-already-in-use-16c4c4d7fe5d)

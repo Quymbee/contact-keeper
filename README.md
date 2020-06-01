@@ -2,7 +2,11 @@
 
 A tutorial from [React Front to Back](https://www.udemy.com/course/modern-react-front-to-back/learn/lecture/14969936#overview) on Udemy.
 
-### bugs encountered while following tutorial:
+#### Live Heroku Link
+
+https://serene-shelf-85864.herokuapp.com/login
+
+#### bugs encountered while following tutorial:
 
 - import uuid from 'uuid' not working
   > uuid version 8.1.0 requires : import {v4 as uuid} from 'uuid'
@@ -18,6 +22,10 @@ A tutorial from [React Front to Back](https://www.udemy.com/course/modern-react-
 - When updating contact, the Name got replaced with the Contact Type (only on update and not on add)
   > Copy and pasted routes/contacts.js from tutorial github, and it fixed the issue
   > Must have mistyped something
+- Deploy to Heroku showed blank screen instead of the app, despite "successful build"
+  > Removed the following from public/index.html : `<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />`
+  > Got rid of default images with react build, but forgot this in clean up
+  > Thank you to [this Q&A thread](https://www.udemy.com/course/modern-react-front-to-back/learn/lecture/14970088#questions/9937068)
 - Proxy error: Could not proxy request /api/auth from localhost:3000 to localhost:5000
   > added `"secure": false` to client/package.json
   > followed [this guide](https://medium.com/@bryantjiminson/solving-proxy-error-could-not-proxy-request-xxx-from-yyy-from-local-reactjs-app-to-nodejs-app-f28f3548afb9)

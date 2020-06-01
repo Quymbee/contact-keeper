@@ -15,6 +15,9 @@ A tutorial from [React Front to Back](https://www.udemy.com/course/modern-react-
   > I usually do my maps as arr.map(e => { //do smth }), but I kept getting this error and solved it by taking out the {} brackets in my map call.
 - onSubmit not working (for me, specifically onSubmit for Register.js)
   > I put onSubmit={onSubmit} in the <input type="submit" /> for Register.js. However, it is supposed to be in the form start tag --> <form onSubmit={onSubmit}></form>
+- Proxy error: Could not proxy request /api/auth from localhost:3000 to localhost:5000
+  > added `"secure": false` to client/package.json
+  > followed [this guide](https://medium.com/@bryantjiminson/solving-proxy-error-could-not-proxy-request-xxx-from-yyy-from-local-reactjs-app-to-nodejs-app-f28f3548afb9)
 - events.js:200 throw er; //unhandled 'error' event
   > when getting general bugs, I thought this was the source. It was not. As far as I can tell... it didn't effect development for me?
   > If you want to look into it though, I did try this [link](https://levelup.gitconnected.com/how-to-kill-server-when-seeing-eaddrinuse-address-already-in-use-16c4c4d7fe5d)

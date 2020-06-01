@@ -6,7 +6,7 @@ A tutorial from [React Front to Back](https://www.udemy.com/course/modern-react-
 
 https://serene-shelf-85864.herokuapp.com/login
 
-#### bugs encountered while following tutorial:
+#### bugs encountered while following tutorial && solutions:
 
 - import uuid from 'uuid' not working
   > uuid version 8.1.0 requires : import {v4 as uuid} from 'uuid'

@@ -55,6 +55,7 @@ const Register = (props) => {
         <div className='form-group'>
           <label htmlFor='name'>Name</label>
           <input
+            id='name'
             type='text'
             name='name'
             value={name}
@@ -65,6 +66,7 @@ const Register = (props) => {
         <div className='form-group'>
           <label htmlFor='email'>Email Address</label>
           <input
+            id='email'
             type='text'
             name='email'
             value={email}
@@ -75,6 +77,7 @@ const Register = (props) => {
         <div className='form-group'>
           <label htmlFor='password'>Password</label>
           <input
+            id='password'
             type='password'
             name='password'
             value={password}
@@ -86,6 +89,7 @@ const Register = (props) => {
         <div className='form-group'>
           <label htmlFor='password2'>Confirm Password</label>
           <input
+            id='password2'
             type='password'
             name='password2'
             value={password2}

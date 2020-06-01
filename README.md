@@ -16,8 +16,8 @@ A tutorial from [React Front to Back](https://www.udemy.com/course/modern-react-
 - onSubmit not working (for me, specifically onSubmit for Register.js)
   > I put onSubmit={onSubmit} in the <input type="submit" /> for Register.js. However, it is supposed to be in the form start tag --> <form onSubmit={onSubmit}></form>
 - When updating contact, the Name got replaced with the Contact Type (only on update and not on add)
-  > Tried looking for any errors. Tried copy & pasting the exact code from tutorial github of parts edited for this sectoin. Could not fix it.
-  > Git stashed (and stash clear) back to point after Login/Register finished, so restarted to Section 10, part 68. Edit/Update button worked fine
+  > Copy and pasted routes/contacts.js from tutorial github, and it fixed the issue
+  > Must have mistyped something
 - Proxy error: Could not proxy request /api/auth from localhost:3000 to localhost:5000
   > added `"secure": false` to client/package.json
   > followed [this guide](https://medium.com/@bryantjiminson/solving-proxy-error-could-not-proxy-request-xxx-from-yyy-from-local-reactjs-app-to-nodejs-app-f28f3548afb9)

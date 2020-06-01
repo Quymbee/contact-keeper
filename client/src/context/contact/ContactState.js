@@ -26,6 +26,33 @@ const ContactState = (props) => {
 
   const [state, dispatch] = useReducer(contactReducer, intialState);
 
+  //update contact
+  const updateContact = async (contact) => {
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    try {
+      const res = await axios.put(
+        `/api/contacts/${contact._id}`,
+        contact,
+        config
+      );
+      console.log('UPDATE', contact);
+      dispatch({
+        type: UPDATE_CONTACT,
+        payload: res.data,
+      });
+    } catch (err) {
+      dispatch({
+        type: CONTACT_ERROR,
+        payload: err.response.msg,
+      });
+    }
+  };
+
   //get contacts
   const getContacts = async () => {
     try {
@@ -52,6 +79,7 @@ const ContactState = (props) => {
 
     try {
       const res = await axios.post('/api/contacts', contact, config);
+      console.log('ADD', contact._id);
       dispatch({
         type: ADD_CONTACT,
         payload: res.data,
@@ -88,11 +116,6 @@ const ContactState = (props) => {
   //clear current
   const clearCurrent = () => {
     dispatch({ type: CLEAR_CURRENT });
-  };
-
-  //update contact
-  const updateContact = (contact) => {
-    dispatch({ type: UPDATE_CONTACT, payload: contact });
   };
 
   //filter

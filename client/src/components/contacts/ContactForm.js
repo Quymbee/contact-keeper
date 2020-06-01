@@ -56,6 +56,7 @@ const ContactForm = () => {
         {current ? 'Update Contact' : 'Add Contact'}
       </h2>
       <input
+        id='name'
         type='text'
         placeholder='Name'
         name='name'
@@ -63,6 +64,7 @@ const ContactForm = () => {
         onChange={onChange}
       />
       <input
+        id='email'
         type='text'
         placeholder='Email'
         name='email'
@@ -70,6 +72,7 @@ const ContactForm = () => {
         onChange={onChange}
       />
       <input
+        id='phone'
         type='text'
         placeholder='Phone'
         name='phone'
